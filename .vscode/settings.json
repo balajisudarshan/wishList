@@ -1,0 +1,11 @@
+{
+  "folder-customization.folders": [
+    {
+      "path": "recipeApp\\backend\\",
+      "badge": "😈"
+    },
+    {
+      "path": "recipeApp\\backend\\routes\\"
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Main navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(255, 192, 71);
+  padding: 10px 20px;
+  position: relative;
+  z-index: 1000;
+}
+
+/* Logo */
+.logo {
+  font-family: "DynaPuff", sans-serif;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #000;
+  user-select: none;
+}
+
+/* Navigation links */
+.links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+/* Link items */
+.links li {
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #222;
+  font-weight: 500;
+}
+
+/* Hover effect */
+.links li:hover {
+  background-color: #fff;
+  color: rgb(255, 192, 71);
+  transform: translateY(-2px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Active state (optional: you can apply a class in React if needed) */
+.links li.active {
+  background-color: #fff;
+  color: rgb(255, 192, 71);
+  font-weight: bold;
+}
+
+/* Hamburger icon */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #000;
+  transition: transform 0.3s ease;
+}
+
+.hamburger:hover {
+  transform: scale(1.1);
+}
+
+/* MOBILE STYLES */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: rgb(255, 192, 71);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .links {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .links li {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
